@@ -16,6 +16,9 @@ public class BasicNavigations {
         //This the line opening an empty browser
         WebDriver driver = new ChromeDriver();
 
+        //This line will maximize the browser size
+        driver.manage().window().maximize();
+
         //3- Go to "https://www.tesla.com"
         driver.get("https://www.tesla.com");
 
@@ -54,10 +57,7 @@ public class BasicNavigations {
         //get the current title after getting the google page
         currentTitle = driver.getTitle();
 
-
         //System.out.println("driver.getTitle() = " + driver.getTitle());
-
-
         System.out.println("currentTitle = " + currentTitle);
 
         // Get the current URL using selenium
