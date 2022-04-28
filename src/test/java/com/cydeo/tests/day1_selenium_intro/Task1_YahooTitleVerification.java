@@ -15,9 +15,28 @@ public class Task1_YahooTitleVerification {
         //1. Open Chrome browser
         WebDriver driver = new ChromeDriver();
 
-        //2. Go to https://www.yahoo.com 3. Verify title:
+        //Make our page fullscreen
+        driver.manage().window().maximize();
+
+        //2. Go to https://www.yahoo.com
         driver.get("https://www.yahoo.com");
 
-       // Expected: Yahoo
+       // 3. Verify title:
+       // Expected: Yahoo is part of the Yahoo family of brands
+        String expectedTitle = "Yahoo is part of the Yahoo family of brands";
+
+
+        //actual title comes from the browser
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Title is as expected. Verification PASSED!");
+
+        }else{
+            System.out.println("Title is NOT as expected. Verification failed!");
+        }
+
+
+
     }
 }
