@@ -24,6 +24,7 @@ public class BasicNavigations {
         System.out.println("currentTitle = " + currentTitle);
 
         String currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
 
         //Stop code execution for 3 seconds
         Thread.sleep(3000);
