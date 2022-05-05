@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T1_CydeoVerifications {
 
+    //IN THIS CLASS WE ARE SOLVING THE DAY2_TASK1
+
     public static void main(String[] args) {
 
        // TC #1: Cydeo practice tool verifications
@@ -25,10 +27,10 @@ public class T1_CydeoVerifications {
          String expectedURL = "cydeo";
          String actualURL = driver.getCurrentUrl();
 
-         if (actualURL.equals(expectedURL)){
-             System.out.println("URL verification passed");
+         if (actualURL.contains(expectedURL)){
+             System.out.println("URL verification PASSED");
          }else{
-             System.out.println("URL verification is Failed!!!");
+             System.out.println("URL verification is FAILED!!!");
          }
 
 
