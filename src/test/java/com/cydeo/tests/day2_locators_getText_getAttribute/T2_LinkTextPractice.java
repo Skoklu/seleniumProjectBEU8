@@ -56,6 +56,6 @@ public class T2_LinkTextPractice {
 
 
 
-
+      driver.close();
     }
 }
