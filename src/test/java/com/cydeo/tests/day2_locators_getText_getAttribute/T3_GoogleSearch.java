@@ -14,7 +14,8 @@ public class T3_GoogleSearch {
 
        // TC#3: Google search
         //1- Open a Chrome browser
-       /*
+
+       /* I tried to write myself below
        WebDriverManager.chromedriver().setup();
        WebDriver driver = new ChromeDriver();
        driver.manage().window().maximize();
