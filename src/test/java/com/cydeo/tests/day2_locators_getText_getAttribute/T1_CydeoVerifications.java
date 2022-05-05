@@ -19,7 +19,7 @@ public class T1_CydeoVerifications {
 
         //2. Go to https://practice.cydeo.com
         driver.navigate().to("https://practice.cydeo.com");
-
+        //OR //driver.get("https://practice.cydeo.com");
 
 
         //3. Verify URL contains
@@ -45,7 +45,7 @@ public class T1_CydeoVerifications {
              System.out.println("Title verification is FAILED!!!");
          }
 
-        driver.close();
+        //driver.close();
 
 
 
