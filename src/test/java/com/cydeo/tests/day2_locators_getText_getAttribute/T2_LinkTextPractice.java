@@ -45,5 +45,17 @@ public class T2_LinkTextPractice {
 
         // 6- Verify title equals:
         // Expected: Practice
+        expectedTitle = "Practice";
+        actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Title verification PASSED");
+        }else{
+            System.out.println("Title verification FAILED!!!");
+        }
+
+
+
+
     }
 }
