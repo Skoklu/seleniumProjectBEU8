@@ -48,6 +48,6 @@ public class T4_LibraryLoginPage {
         //PS: locate username input box using “className” locator
          //   locate password input box using “id” locator
         //    locate Sign in button using “tagName” locator
-
+driver.close();
     }
 }
