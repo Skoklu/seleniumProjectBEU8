@@ -26,8 +26,21 @@ public class T3_getAttribute_cssSelector {
         //WebElement logIn = driver.findElement(By.className("login-btn"));
         //                          tagName[attribute='value']
         //                          input[class='login-btn']
-        WebElement signInButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+        //WebElement signInButton = driver.findElement(By.cssSelector("input[class='login-btn']"));
+        //WebElement signInButton = driver.findElement(By.cssSelector("input[type='submit']"));
+        WebElement signInButton = driver.findElement(By.cssSelector("input[value='Log In']"));
 
+        String expectedButtonText = "Log In";
 
+        //Getting the value of the attribute "value"
+        String actualButtonText = signInButton.getAttribute("value");
+        System.out.println("actualButtonText = " + actualButtonText);
+        System.out.println("expectedButtonText = " + expectedButtonText);
+
+        if (actualButtonText.equals(expectedButtonText)){
+            System.out.println("Log in button text verification PASSED!");
+        }else{
+            System.out.println("Log in button text verification FAILED");
+        }
     }
 }
