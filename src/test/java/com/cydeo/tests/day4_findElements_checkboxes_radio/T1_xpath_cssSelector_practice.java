@@ -78,7 +78,7 @@ public class T1_xpath_cssSelector_practice {
         System.out.println("emailInputBox.isDisplayed() = " + emailInputBox.isDisplayed());
         System.out.println("RetrievePasswordButton2.isDisplayed() = " + RetrievePasswordButton2.isDisplayed());
         System.out.println("PoweredByCydeoLink.isDisplayed() = " + PoweredByCydeoLink.isDisplayed());
-
+        driver.close();
         // First solve the task with using cssSelector only.
         // Try to create 2 different
         // cssSelector if possible
