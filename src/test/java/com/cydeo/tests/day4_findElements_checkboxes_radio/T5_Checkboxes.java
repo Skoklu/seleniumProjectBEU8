@@ -50,5 +50,8 @@ public class T5_Checkboxes {
 
         // 7. Confirm checkbox #2 is NOT selected.
         System.out.println("checkboxes2.isSelected(), expecting false = " + checkboxes2.isSelected());
+
+
+        driver.close();
     }
 }
