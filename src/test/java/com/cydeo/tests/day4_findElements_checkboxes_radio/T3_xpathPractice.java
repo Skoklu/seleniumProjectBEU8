@@ -42,7 +42,8 @@ public class T3_xpathPractice {
         }else{
             System.out.println("Clicked on button one! verification is FAILED!!!");
         }
-        driver.close();
+       // driver.close();
+
 
 
         // USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
