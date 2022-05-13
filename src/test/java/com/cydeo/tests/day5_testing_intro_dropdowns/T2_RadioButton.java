@@ -41,5 +41,6 @@ public class T2_RadioButton {
             System.out.println("Button is not selected. Verification FAILED!!!");
         }
         //USE XPATH LOCATOR FOR ALL WEBELEMENT LOCATORS
+        driver.close();
     }
 }
