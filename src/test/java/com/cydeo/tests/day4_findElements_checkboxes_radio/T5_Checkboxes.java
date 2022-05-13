@@ -52,6 +52,6 @@ public class T5_Checkboxes {
         System.out.println("checkboxes2.isSelected(), expecting false = " + checkboxes2.isSelected());
 
 
-        driver.close();
+        //driver.close();
     }
 }
