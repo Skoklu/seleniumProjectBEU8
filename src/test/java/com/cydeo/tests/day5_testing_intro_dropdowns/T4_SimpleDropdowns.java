@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,10 +43,24 @@ public class T4_SimpleDropdowns {
         WebElement currentlySelectedOption = simpleDropdown.getFirstSelectedOption();
         String actualSimpleDropdownText = currentlySelectedOption.getText();
         System.out.println(actualSimpleDropdownText);
+        String expectedSimpleDropdownText = "Please select an option";
+
 
         //Expected: “Please select an option”
-       // 4. Verify “State selection” default selected value is correct
-       // Expected: “Select a State”
+        Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText);
 
+
+        // 4. Verify “State selection” default selected value is correct
+        Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+
+
+        // Expected: “Select a State
+        String expectedStateDropdownText = "Select a State";
+        String actualStateDropdownText  = stateDropdown.getFirstSelectedOption().getText();
+
+        Assert.assertEquals(actualStateDropdownText, expectedStateDropdownText);
+        Assert.assertEquals(stateDropdown.getFirstSelectedOption().getText(), "Select a State");
+
+        driver.close();
     }
 }
