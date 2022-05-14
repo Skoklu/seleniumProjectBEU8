@@ -1,8 +1,35 @@
 package com.cydeo.tests.day5_testing_intro_dropdowns;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNG_Intro {
+
+
+    @Test (priority = 1)
+    public void test1(){
+        System.out.println("Test one is running...");
+
+        //ASSERT EQUALS: compare 2 of the same things
+        String actual = "apple";
+        String expected = "apple";
+        Assert.assertEquals(actual, expected);
+
+    }
+
+
+    @Test (priority = 2)
+    public void test2(){
+        System.out.println("Test 2 is running...");
+
+        //Assert True
+        String actual = "apple";
+        String expected = "apple";
+        Assert.assertTrue(actual.equals(expected));
+
+    }
+
+
 
 
     @BeforeClass
@@ -17,12 +44,12 @@ public class TestNG_Intro {
     }
 
 
-
     @BeforeMethod
     public void setUpMethod(){
         System.out.println("BeforeMethod is running");
 
     }
+
     @AfterMethod
     public void tearDownMethod(){
         System.out.println("--->AfterMethod is running");
@@ -30,14 +57,5 @@ public class TestNG_Intro {
         System.out.println("-------------------------------------");
     }
 
-
-    @Test (priority = 1)
-    public void test1(){
-        System.out.println("Test one is running...");
-    }
-    @Test (priority = 2)
-    public void test2(){
-        System.out.println("Test 2 is running...");
-    }
 
 }
