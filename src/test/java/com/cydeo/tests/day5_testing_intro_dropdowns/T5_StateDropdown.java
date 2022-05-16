@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class T5_StateDropdown {
 
+
    // TC #5: Selecting state from State dropdown and verifying result
     // 1. Open Chrome browser
     WebDriver driver;
@@ -53,6 +54,5 @@ public class T5_StateDropdown {
 
         Assert.assertEquals(actualOptionText, expectedOptionText);
     }
-    
 
 }
