@@ -36,6 +36,8 @@ public class DropdownPractices {
 
 
        // 6. Verify final selected option is California.
+
+        //".getFirstSelectedOption()"  we are getting currently selected option not first option
         String expectedOptionText = "California";
         String actualOptionText = stateDropdown.getFirstSelectedOption().getText();
 
