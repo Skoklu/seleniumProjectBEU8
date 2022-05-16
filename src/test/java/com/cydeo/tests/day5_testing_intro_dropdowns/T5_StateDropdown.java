@@ -3,8 +3,8 @@ package com.cydeo.tests.day5_testing_intro_dropdowns;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -28,20 +28,31 @@ public class T5_StateDropdown {
     @Test
     public void simpleDropdownTest(){
 
+        Select selectDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+
         // 3. Select Illinois
-
-        Select simpleSelect = new Select(driver.findElement(By.xpath("//option[@value='IL']")));
-
-        WebElement currentlySelectedOption = simpleSelect.getFirstSelectedOption();
+        //Use  Select options. (visible text)
+        selectDropdown.selectByVisibleText("Illinois");
 
 
+        //4. Select Virginia
+        //Use Select options. (value)
+        selectDropdown.selectByValue("VA");
+
+
+        //5. Select California
+        //Use Select options. (index)
+        selectDropdown.selectByIndex(5);
+
+
+//6. Verify final selected option is California.
+
+     String expectedOptionText = "California";
+
+     String actualOptionText = selectDropdown.getFirstSelectedOption().getText();
+
+        Assert.assertEquals(actualOptionText, expectedOptionText);
     }
     
 
-
-//4. Select Virginia
-//5. Select California
-//6. Verify
-    //final selected option is California.
-    //Use all Select options. (visible text, value, index)
 }
