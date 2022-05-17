@@ -71,6 +71,9 @@ public class T5_WindowsPractices {
         //If we want to go back to main page, we can use already stored main handle
         //driver.switchTo().window(mainHandle);
 
+        //If we want to go back to main page, we can use already stored main handle
+        //driver.switchTo().window(mainHandle);
+
     }
 
     @AfterMethod
