@@ -36,11 +36,14 @@ public class T4_IframePractice {
     public void iframe_Test(){
 
         //We need to switch driver's focus to iframe
-            //option#1- switching the iframe using id attribute value
-            driver.switchTo().frame("mce_0_ifr");  //frame(iframe_id);
+            //option #1- switching the iframe using id attribute value
+            driver.switchTo().frame("mce_0_ifr");  // 1- frame(iframe_id);
 
-            //option#2- passing index number of iframe
-            driver.switchTo().frame(0);
+            //option #2- passing index number of iframe
+            driver.switchTo().frame(0);    // 2- frame(index number);
+
+            //option #3- locate as web element and pass in frame()method
+            driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']"))); // 3- frame(iframe)
 
         //Locate the p tag
             WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
@@ -51,7 +54,7 @@ public class T4_IframePractice {
             // 5. Verify: “An iFrame containing the TinyMCE WYSIWYG Editor”
             //To be able to verify the header, we must switch back to "main HTML"
 
-            driver.switchTo().parentFrame();  //parentFrame();
+            driver.switchTo().parentFrame();  // 4- parentFrame();
             WebElement headerText = driver.findElement(By.xpath("//h3"));
             Assert.assertTrue(headerText.isDisplayed());
 
