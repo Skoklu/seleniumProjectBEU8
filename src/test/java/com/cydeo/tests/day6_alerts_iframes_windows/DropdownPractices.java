@@ -66,7 +66,7 @@ public class DropdownPractices {
         // 1. Open Chrome browser
         //2. Go to https://practice.cydeo.com/dropdown
 
-       ***------- until here I did them under the @BeforeMethod line 16 -----------***
+       ***------- until here I did them same with under the @BeforeMethod line 16 -----------***
         */
         //3. Select “December 1st, 1923” and verify it is selected.
         Select yearDropdown = new Select(driver.findElement(By.xpath("//select[@id='year']")));
