@@ -32,7 +32,6 @@ public class DropdownPractices {
     public void dropdown_task5(){
         // TC #5: Selecting state from State dropdown and verifying result
         //We located the dropdown and it is ready to use
-
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
 
