@@ -48,7 +48,7 @@ public class T4_IframePractice {
         //Locate the p tag
             WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 
-            //4. Assert: “Your content goes here.” Text is displayed.
+            //4. Assert: “Your content goes here.” Text is displayed
             Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
             // 5. Verify: “An iFrame containing the TinyMCE WYSIWYG Editor”
