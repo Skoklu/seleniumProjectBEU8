@@ -28,10 +28,6 @@ public class T1_AlertPractices {
         //2. Go to website: http://practice.cydeo.com/javascript_alerts
       driver.get("https://practice.cydeo.com/javascript_alerts");
 
-
-        //3. Click to “Click for JS Alert” button
-        //4. Click to OK button from the alert
-        //5. Verify “You successfully clicked an alert” text is displayed.
     }
 
     @Test
