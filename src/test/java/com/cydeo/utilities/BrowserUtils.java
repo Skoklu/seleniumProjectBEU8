@@ -1,5 +1,9 @@
 package com.cydeo.utilities;
 
+/*
+In this class only general utility methods that are not related to some spesific page.
+ */
+
 public class BrowserUtils {
 
     /*
