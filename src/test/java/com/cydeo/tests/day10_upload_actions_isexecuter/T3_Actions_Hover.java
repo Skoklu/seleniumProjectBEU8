@@ -50,6 +50,7 @@ public class T3_Actions_Hover {
 
         //7. Confirm:
         //a. “name: user3” is displayed
+        Assert.assertTrue(user3.isDisplayed());
 
     }
 }
