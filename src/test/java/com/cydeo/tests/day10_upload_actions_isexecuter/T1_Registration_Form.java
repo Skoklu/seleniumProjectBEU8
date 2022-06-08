@@ -23,12 +23,27 @@ public class T1_Registration_Form {
 
         // 3. Enter first name
         WebElement inputFirstName = Driver.getDriver().findElement(By.xpath("//input[@name='firstname']"));
-        inputFirstName.sendKeys(faker.name().firstName());
+        String fakerFirstName = faker.name().firstName();
+        inputFirstName.sendKeys(fakerFirstName);
 
         //4. Enter last name
-       // WebElement inputLastName = Driver.getDriver()
-       // 5. Enter username
+        WebElement inputLastName = Driver.getDriver().findElement(By.xpath("//input[@name='lastname']"));
+        inputLastName.sendKeys(faker.name().lastName());  //same approach with line 26-27  //this is shorter way
+
+
+        // 5. Enter username
+        WebElement inputUsername = Driver.getDriver().findElement(By.xpath("//input[@name='username']"));
+        //inputUsername.sendKeys(faker.name().username().replaceAll(".", ""));  //we can delete "." by using replaceAll method
+        //                                      OR
+        String user = faker.bothify("helpdesk###");
+
+        inputUsername.sendKeys(user);
+
         //6. Enter email address
+        WebElement inputEmail = Driver.getDriver().findElement(By.xpath("//input[@name='email']"));
+        inputEmail.sendKeys(user+"@email.com");
+
+
         //7. Enter password
         //8. Enter phone number
        // 9. Select a gender from radio buttons
