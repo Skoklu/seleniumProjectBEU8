@@ -5,6 +5,8 @@ import com.cydeo.utilities.Driver;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -45,15 +47,52 @@ public class T1_Registration_Form {
 
 
         //7. Enter password
+        WebElement inputPassword = Driver.getDriver().findElement(By.xpath("//input[@name='password']"));
+        inputPassword.sendKeys(faker.numerify("########"));
+        //System.out.println("faker.internet().password() = " + faker.internet().password());
+
+
         //8. Enter phone number
-       // 9. Select a gender from radio buttons
+        WebElement inputPhoneNumber = Driver.getDriver().findElement(By.xpath("//input[@name='phone']"));
+        inputPhoneNumber.sendKeys(faker.numerify("###-###-####"));
+
+
+        // 9. Select a gender from radio buttons
+        WebElement inputGender = Driver.getDriver().findElement(By.xpath("//input[@value='female']"));
+        inputGender.click();
+
+
       // 10.Enter date of birth
+        WebElement  inputBirthDay = Driver.getDriver().findElement(By.xpath("//input[@name='birthday']"));
+        faker.number().numberBetween(2004,1920);
+        inputBirthDay.sendKeys("03/08/2000");
+
+
+
         // 11.Select Department/Office
+        Select departmentDropdown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
+        departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
+
+
        // 12.Select Job Title
+        Select jobTitle = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='job_title']")));
+        jobTitle.selectByIndex(faker.number().numberBetween(1,8));
+
+
         //13.Select programming language from checkboxes
+       WebElement programmingLanguage = Driver.getDriver().findElement(By.xpath("//input[@value='java']"));
+
+
         //14.Click to sign up button
-        //15. Verify success message “You’ve successfully completed registration.” is
-       // displayed.
+        WebElement signInButton = Driver.getDriver().findElement(By.xpath("//button[@type='checkbox']"));
+        signInButton.click();
+
+
+        //15. Verify success message “You’ve successfully completed registration.” is displayed.
+        WebElement wellDoneText = Driver.getDriver().findElement(By.xpath("//p"));
+        String expectedWellDoneText = "You've successfully completed registration!";
+
+        Assert.assertTrue(wellDoneText.isDisplayed());
 
     }
 }
