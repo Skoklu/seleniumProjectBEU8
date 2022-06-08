@@ -29,10 +29,10 @@ public class T2_Upload_Practice {
         WebElement uploadButton = Driver.getDriver().findElement(By.id("find-submit"));
         uploadButton.click();
 
-        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.tagName("h3"));
 
         //4. Assert:
         //-File uploaded text is displayed on the page
+        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.tagName("h3"));
         Assert.assertTrue(fileUploadedHeader.isDisplayed());
     }
 }
