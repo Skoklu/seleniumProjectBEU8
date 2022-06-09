@@ -81,6 +81,7 @@ public class T1_Registration_Form {
 
         //13.Select programming language from checkboxes
        WebElement programmingLanguage = Driver.getDriver().findElement(By.xpath("//input[@value='java']"));
+       programmingLanguage.click();
 
 
         //14.Click to sign up button
