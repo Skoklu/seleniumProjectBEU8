@@ -50,10 +50,12 @@ public class POMPractices {
 
        // 4- Verify expected error is displayed:
         //Expected: Please enter a valid email address.
+        Assert.assertTrue(libraryLoginPage.enterValidEmailErrorMessage.isDisplayed());
 
+        Driver.closeDriver();
 
+        //NOTE: FOLLOW POM DESIGN PATTERN
     }
 
 
 }
-//NOTE: FOLLOW POM DESIGN PATTERN
