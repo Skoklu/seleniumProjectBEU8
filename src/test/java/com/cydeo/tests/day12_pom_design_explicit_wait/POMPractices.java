@@ -36,7 +36,7 @@ public class POMPractices {
        // Expected: This field is required. NOTE: FOLLOW POM DESIGN PATTERN
 
         Assert.assertTrue(libraryLoginPage.fieldRequiredErrorMessage.isDisplayed());
-        //Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
@@ -85,7 +85,7 @@ public class POMPractices {
         // 4- Verify title expected error is displayed:
         //Expected: Sorry, Wrong Email or Password
         Assert.assertTrue(libraryLoginPage.WrongEmailOrPasswordMessage.isDisplayed());
-
+            Driver.closeDriver();
     }
 
 } // NOTE: FOLLOW POM DESIGN PATTERN
