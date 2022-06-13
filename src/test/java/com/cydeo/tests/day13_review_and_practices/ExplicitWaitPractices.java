@@ -63,4 +63,21 @@ public class ExplicitWaitPractices {
 
 
     }
+
+    @Test
+    public void enable_button_test(){
+
+        //1- Open a chrome browser
+        //2- Go to: https://practice.cydeo.com/dynamic_controls
+        //until here under the @Before Method
+
+
+        // 3- Click to “Enable” button
+
+        //4- Wait until “loading bar disappears”
+        //5- Verify:
+        //a. Input box is enabled.
+        //b. “It’s enabled!” message is displayed.
+               // NOTE: FOLLOW POM
+    }
 }
