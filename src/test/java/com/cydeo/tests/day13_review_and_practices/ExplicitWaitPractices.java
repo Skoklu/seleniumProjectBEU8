@@ -74,8 +74,6 @@ public class ExplicitWaitPractices {
 
 
         // 3- Click to “Enable” button
-        System.out.println("dynamicControlPage.enableButton.isEnabled() = "
-                + dynamicControlPage.enableButton.isEnabled());
 
         dynamicControlPage.enableButton.click();
 
@@ -86,7 +84,7 @@ public class ExplicitWaitPractices {
         //calling our explicitWait utility method to wait loadingBar to disappear
         BrowserUtils.waitForInvisibilityOf(dynamicControlPage.loadingBar);
 
-        //System.out.println("dynamicControlPage.inputBox.isEnabled() = "+ dynamicControlPage.inputBox.isEnabled());
+        System.out.println("dynamicControlPage.inputBox.isEnabled() = "+ dynamicControlPage.inputBox.isEnabled());
 
 
         //5- Verify:
