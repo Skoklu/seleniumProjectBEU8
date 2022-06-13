@@ -58,5 +58,9 @@ public class ExplicitWaitPractices {
         Assert.assertTrue(dynamicControlPage.message.isDisplayed());
         Assert.assertTrue(dynamicControlPage.message.getText().equals("It's gone!"));
         // NOTE: FOLLOW POM
+
+
+
+
     }
 }
